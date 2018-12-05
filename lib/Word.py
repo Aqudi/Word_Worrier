@@ -27,8 +27,27 @@ class Word:
         return result
 
     def decomposeHangul(self, string):
-        pass
+        # 계산식 출처: https: // github.com / neotune / python - korean - handler
+        # 라이선스: MIT라이선스
+
+        # 유니코드 한글 시작 : 44032, 끝 : 55199
+        BASE_CODE, CHOSUNG= 44032, 588
+        # 초성 리스트. 00 ~ 18
+        CHOSUNG_LIST = ['ㄱ', 'ㄲ', 'ㄴ', 'ㄷ', 'ㄸ', 'ㄹ', 'ㅁ', 'ㅂ', 'ㅃ', 'ㅅ', 'ㅆ', 'ㅇ', 'ㅈ', 'ㅉ', 'ㅊ', 'ㅋ', 'ㅌ', 'ㅍ', 'ㅎ']
+
+        result = []
+        string = self.extractHangul(string)
+
+        for char in string:
+            char_code = ord(char) - BASE_CODE
+            char1 = int(char_code / CHOSUNG)
+            result.append(CHOSUNG_LIST[char1])
+
+        return result
+
 
 if __name__ == "__main__":
     d = Word()
-    print(d.getRandomWord())
+    word = d.getRandomWord()
+    print(word)
+    print(d.decomposeHangul(word))
