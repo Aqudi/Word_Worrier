@@ -20,7 +20,8 @@ class Word:
         word = self.extractHangul(word)
         return word
 
-    def extractHangul(self, string):
+    @staticmethod
+    def extractHangul(string):
         # 정규식 출처: http: // jokergt.tistory.com / 52[Gun's Knowledge Base]
         hangul = re.compile('[^ ㄱ-ㅣ가-힣]+')  # 한글과 띄어쓰기를 제외한 모든 글자
         result = hangul.sub('', string)  # 한글과 띄어쓰기를 제외한 모든 부분을 제거
