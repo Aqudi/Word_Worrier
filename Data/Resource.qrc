@@ -1,0 +1,8 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>Final Boss.PNG</file>
+    <file>First Boss.PNG</file>
+    <file>Hero.PNG</file>
+    <file>Second Boss.PNG</file>
+  </qresource>
+</RCC>
