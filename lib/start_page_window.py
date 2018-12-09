@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Start Page Window.ui'
+# Form implementation generated from reading ui file 'start_page_window.ui'
 #
 # Created by: PyQt5 UI code generator 5.11.3
 #
