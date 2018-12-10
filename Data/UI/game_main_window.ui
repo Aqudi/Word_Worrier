@@ -153,7 +153,7 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -200,7 +200,7 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -214,7 +214,7 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -261,7 +261,7 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -275,7 +275,7 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
          <property name="alignment">
           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -322,7 +322,7 @@
           <enum>QFrame::Box</enum>
          </property>
          <property name="text">
-          <string>TextLabel</string>
+          <string/>
          </property>
         </widget>
        </item>
@@ -438,8 +438,11 @@ QProgressBar::chunk {
     margin: 1px; 
 } </string>
        </property>
+       <property name="maximum">
+        <number>1000</number>
+       </property>
        <property name="value">
-        <number>100</number>
+        <number>800</number>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -448,7 +451,7 @@ QProgressBar::chunk {
         <bool>true</bool>
        </property>
        <property name="format">
-        <string>%p/%m</string>
+        <string>%v/%m</string>
        </property>
       </widget>
      </item>
@@ -497,8 +500,11 @@ QProgressBar::chunk {
     margin: 1px; 
 } </string>
        </property>
+       <property name="maximum">
+        <number>1000</number>
+       </property>
        <property name="value">
-        <number>100</number>
+        <number>500</number>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -507,7 +513,7 @@ QProgressBar::chunk {
         <bool>false</bool>
        </property>
        <property name="format">
-        <string>%p/%m</string>
+        <string>%v/%m</string>
        </property>
       </widget>
      </item>
