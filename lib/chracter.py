@@ -82,6 +82,10 @@ class Character:
 class Villain(Character): 
     def __init__(self, name="최빵빵", health_point=5000, attack_point=250, avoid_chance=5, critical_chance=5, image=":/newPrefix/First Boss.PNG", auto_attack=5):
         super().__init__(name, health_point, attack_point, avoid_chance, critical_chance, image, auto_attack)
+        self.images = [":/newPrefix/First Boss.PNG", ":/newPrefix/Second Boss.PNG", ":/newPrefix/Final Boss.PNG"]
+
+    def change_image(self, number):
+        self.image = self.images[number-1]
 
 
 class Hero(Character):
