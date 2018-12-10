@@ -2,13 +2,14 @@ import random
 
 
 class Character:
-    def __init__(self, name, health_point, attack_point, avoid_chance, critical_chance, image):
+    def __init__(self, name, health_point, attack_point, avoid_chance, critical_chance,image, auto_attack=1):
         self.name = name
         self.image = image
         self.hp = health_point
         self.ap = attack_point
         self.ac = avoid_chance
         self.cc = critical_chance
+        self.aa = auto_attack
 
     def modify_hp(self, point):
         self.hp += point
@@ -21,6 +22,9 @@ class Character:
 
     def modify_cc(self, point):
         self.cc += point
+
+    def modify_aa(self, point):
+        self.aa += point
 
     def get_hp(self):
         return self.hp
@@ -36,6 +40,9 @@ class Character:
 
     def get_name(self):
         return self.name
+
+    def get_aa(self):
+        return self.aa
 
     def get_information(self):
         information = [("name", self.name), ("HP", self.hp), ("AP", self.ap), ("AC", self.ac), ("CC", self.cc)]
@@ -73,17 +80,19 @@ class Character:
 
 
 class Villain(Character): 
-    pass
+    def __init__(self, name="최빵빵", health_point=5000, attack_point=250, avoid_chance=5, critical_chance=5, image=":/newPrefix/First Boss.PNG", auto_attack=5):
+        super().__init__(name, health_point, attack_point, avoid_chance, critical_chance, image, auto_attack)
 
 
 class Hero(Character):
-    pass
+    def __init__(self, name="김큐티", health_point=5000, attack_point=150, avoid_chance=10, critical_chance=15, image=":/newPrefix/Hero.PNG", auto_attack=1):
+        super().__init__(name, health_point, attack_point, avoid_chance, critical_chance, image, auto_attack)
 
 
 if __name__ == "__main__":
     import Data.Resource_rc
     villain = Villain("최빵빵", 5000, 200, 50, 10, ":/newPrefix/First Boss.PNG",)
-    hero = Hero("김큐티", 5000, 150, 3, 25, ":/newPrefix/Hero.PNG",)
+    hero = Hero("김큐티", 5000, 150, 3, 15, ":/newPrefix/Hero.PNG",)
     while hero.check_alive() is False and villain.check_alive() is False:
         villain.attack(hero)
         hero.attack(villain)
