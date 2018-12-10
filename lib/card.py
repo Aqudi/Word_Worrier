@@ -51,7 +51,7 @@ class Card:
 
     def set_random_pool_value(self):
         value_scope = {}
-        value_list = [(20, 40), (10, 20), (2, 4), (2, 4), (2, 5), (3, 4), (2, 3), (1, 2), (5, 8), (10, 12), (17, 20)]
+        value_list = [(10, 20), (10, 20), (2, 4), (2, 4), (2, 5), (3, 4), (2, 3), (1, 2), (5, 8), (10, 12), (17, 20)]
         for name, value in zip(self.STATS_LIST + self.ATTACKS_LIST + self.HEALS_LIST, value_list):
             value_scope.update({name: value})
         #print(value_scope)
@@ -70,8 +70,8 @@ class Card:
 
     def get_information(self):
         information = [("TYPE", self.card_type), ("NAME", self.card_name), ("VALUE", self.card_stats_value)]
-        for tag, value in information:
-            print(tag + " : ", value)
+        #for tag, value in information:
+        #    print(tag + " : ", value)
         return information
 
 
