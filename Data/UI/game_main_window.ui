@@ -535,7 +535,13 @@ QProgressBar::chunk {
          </property>
          <property name="minimumSize">
           <size>
-           <width>0</width>
+           <width>357</width>
+           <height>40</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>357</width>
            <height>40</height>
           </size>
          </property>
@@ -555,6 +561,18 @@ QProgressBar::chunk {
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>457</width>
+           <height>270</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>457</width>
+           <height>270</height>
+          </size>
          </property>
          <property name="frameShape">
           <enum>QFrame::Box</enum>
@@ -593,6 +611,18 @@ QProgressBar::chunk {
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>172</width>
+           <height>155</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>172</width>
+           <height>155</height>
+          </size>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
@@ -625,6 +655,18 @@ QPushButton:pressed {
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>172</width>
+           <height>155</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>172</width>
+           <height>155</height>
+          </size>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
@@ -654,6 +696,18 @@ QPushButton:pressed {
            <verstretch>0</verstretch>
           </sizepolicy>
          </property>
+         <property name="minimumSize">
+          <size>
+           <width>172</width>
+           <height>155</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>172</width>
+           <height>155</height>
+          </size>
+         </property>
          <property name="autoFillBackground">
           <bool>false</bool>
          </property>
@@ -678,10 +732,25 @@ QPushButton:pressed {
        <item row="0" column="0">
         <widget class="QCommandLinkButton" name="UpgradeButton1">
          <property name="sizePolicy">
-          <sizepolicy hsizetype="MinimumExpanding" vsizetype="MinimumExpanding">
+          <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
            <horstretch>0</horstretch>
            <verstretch>0</verstretch>
           </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>172</width>
+           <height>155</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>172</width>
+           <height>155</height>
+          </size>
+         </property>
+         <property name="cursor">
+          <cursorShape>ArrowCursor</cursorShape>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>

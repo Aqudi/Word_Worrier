@@ -257,7 +257,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.wordInput.sizePolicy().hasHeightForWidth())
         self.wordInput.setSizePolicy(sizePolicy)
-        self.wordInput.setMinimumSize(QtCore.QSize(0, 40))
+        self.wordInput.setMinimumSize(QtCore.QSize(357, 40))
+        self.wordInput.setMaximumSize(QtCore.QSize(357, 40))
         self.wordInput.setObjectName("wordInput")
         self.gameLayout.addWidget(self.wordInput, 0, 0, 1, 1)
         self.check = QtWidgets.QPushButton(self.gridLayoutWidget_3)
@@ -269,6 +270,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.wordInformation.sizePolicy().hasHeightForWidth())
         self.wordInformation.setSizePolicy(sizePolicy)
+        self.wordInformation.setMinimumSize(QtCore.QSize(457, 270))
+        self.wordInformation.setMaximumSize(QtCore.QSize(457, 270))
         self.wordInformation.setFrameShape(QtWidgets.QFrame.Box)
         self.wordInformation.setFrameShadow(QtWidgets.QFrame.Sunken)
         self.wordInformation.setAlignment(QtCore.Qt.AlignJustify|QtCore.Qt.AlignTop)
@@ -284,6 +287,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.UpgradeButton4.sizePolicy().hasHeightForWidth())
         self.UpgradeButton4.setSizePolicy(sizePolicy)
+        self.UpgradeButton4.setMinimumSize(QtCore.QSize(172, 155))
+        self.UpgradeButton4.setMaximumSize(QtCore.QSize(172, 155))
         self.UpgradeButton4.setAutoFillBackground(False)
         self.UpgradeButton4.setStyleSheet("QPushButton {\n"
 "    border: 0.5px solid #000000;\n"
@@ -303,6 +308,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.UpgradeButton3.sizePolicy().hasHeightForWidth())
         self.UpgradeButton3.setSizePolicy(sizePolicy)
+        self.UpgradeButton3.setMinimumSize(QtCore.QSize(172, 155))
+        self.UpgradeButton3.setMaximumSize(QtCore.QSize(172, 155))
         self.UpgradeButton3.setAutoFillBackground(False)
         self.UpgradeButton3.setStyleSheet("QPushButton {\n"
 "    border: 0.5px solid #000000;\n"
@@ -321,6 +328,8 @@ class Ui_MainWindow(object):
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.UpgradeButton2.sizePolicy().hasHeightForWidth())
         self.UpgradeButton2.setSizePolicy(sizePolicy)
+        self.UpgradeButton2.setMinimumSize(QtCore.QSize(172, 155))
+        self.UpgradeButton2.setMaximumSize(QtCore.QSize(172, 155))
         self.UpgradeButton2.setAutoFillBackground(False)
         self.UpgradeButton2.setStyleSheet("QPushButton {\n"
 "    border: 0.5px solid #000000;\n"
@@ -334,11 +343,14 @@ class Ui_MainWindow(object):
         self.UpgradeButton2.setObjectName("UpgradeButton2")
         self.upgradeLayout.addWidget(self.UpgradeButton2, 0, 1, 1, 1)
         self.UpgradeButton1 = QtWidgets.QCommandLinkButton(self.gridLayoutWidget_3)
-        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.MinimumExpanding, QtWidgets.QSizePolicy.MinimumExpanding)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Preferred, QtWidgets.QSizePolicy.Preferred)
         sizePolicy.setHorizontalStretch(0)
         sizePolicy.setVerticalStretch(0)
         sizePolicy.setHeightForWidth(self.UpgradeButton1.sizePolicy().hasHeightForWidth())
         self.UpgradeButton1.setSizePolicy(sizePolicy)
+        self.UpgradeButton1.setMinimumSize(QtCore.QSize(172, 155))
+        self.UpgradeButton1.setMaximumSize(QtCore.QSize(172, 155))
+        self.UpgradeButton1.setCursor(QtGui.QCursor(QtCore.Qt.ArrowCursor))
         self.UpgradeButton1.setAutoFillBackground(False)
         self.UpgradeButton1.setStyleSheet("QPushButton {\n"
 "    border: 0.5px solid #000000;\n"
