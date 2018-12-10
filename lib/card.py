@@ -36,7 +36,7 @@ class Card:
                                  "ATTACK": attacks_pool_values,
                                  "HEAL": heals_pool_values}
         self.set_card_pool()
-        
+
         # 실제 카드 정보 저장
         self.set_random_pool_value()
 
@@ -47,17 +47,17 @@ class Card:
         for key in keys:
             for name, value in zip(self.card_pool_list[key], self.card_pool_values[key]):
                 self.card_pool[key] += [name] * value
-        #print(self.card_pool)
+        # print(self.card_pool)
 
     def set_random_pool_value(self):
         value_scope = {}
         value_list = [(10, 20), (10, 20), (2, 4), (2, 4), (2, 5), (3, 4), (2, 3), (1, 2), (5, 8), (10, 12), (17, 20)]
         for name, value in zip(self.STATS_LIST + self.ATTACKS_LIST + self.HEALS_LIST, value_list):
             value_scope.update({name: value})
-        #print(value_scope)
+        # print(value_scope)
         self.card_type = choice(self.card_pool["TYPE"])
         self.card_name = choice(self.card_pool[self.card_type])
-        self.card_stats_value = randrange(value_scope[self.card_name][0], value_scope[self.card_name][1],)
+        self.card_stats_value = randrange(value_scope[self.card_name][0], value_scope[self.card_name][1], )
 
     def get_type(self):
         return self.card_type
@@ -70,7 +70,7 @@ class Card:
 
     def get_information(self):
         information = [("TYPE", self.card_type), ("NAME", self.card_name), ("VALUE", self.card_stats_value)]
-        #for tag, value in information:
+        # for tag, value in information:
         #    print(tag + " : ", value)
         return information
 
