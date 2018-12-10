@@ -120,8 +120,8 @@
      <rect>
       <x>240</x>
       <y>40</y>
-      <width>381</width>
-      <height>251</height>
+      <width>388</width>
+      <height>255</height>
      </rect>
     </property>
     <layout class="QVBoxLayout" name="StatusLabels">
@@ -137,7 +137,11 @@
         <enum>QFrame::Box</enum>
        </property>
        <property name="text">
-        <string/>
+        <string>능력치 설명:
+ AP: 공격력 
+ AC: 회피율 33%, 66%, 99% 데미지 감소
+ CC: 치명타확률 발동시 2배데미지
+ AUTO ATTACK: 자동공격 delay</string>
        </property>
       </widget>
      </item>
@@ -324,6 +328,89 @@
        </item>
       </layout>
      </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QProgressBar" name="AA_Hero">
+         <property name="styleSheet">
+          <string notr="true">QProgressBar{ 
+    border: 2px solid grey;
+}
+ QProgressBar::chunk {
+background-color: #f4ffc2;
+}</string>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="format">
+          <string>%p/%m</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="CriticalChance_2">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="font">
+          <font>
+           <family>휴먼아미체</family>
+           <pointsize>18</pointsize>
+          </font>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::NoFrame</enum>
+         </property>
+         <property name="text">
+          <string>AUTO ATTACK</string>
+         </property>
+         <property name="textFormat">
+          <enum>Qt::PlainText</enum>
+         </property>
+         <property name="scaledContents">
+          <bool>false</bool>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="wordWrap">
+          <bool>false</bool>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QProgressBar" name="AA_villain">
+         <property name="styleSheet">
+          <string notr="true">QProgressBar{ 
+    border: 2px solid grey;
+}
+ QProgressBar::chunk {
+background-color: #f4ffc2;
+}</string>
+         </property>
+         <property name="value">
+          <number>0</number>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+         <property name="format">
+          <string>%p/%m</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
     </layout>
    </widget>
    <widget class="QWidget" name="horizontalLayoutWidget_4">
@@ -352,7 +439,7 @@ QProgressBar::chunk {
 } </string>
        </property>
        <property name="value">
-        <number>24</number>
+        <number>100</number>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -411,7 +498,7 @@ QProgressBar::chunk {
 } </string>
        </property>
        <property name="value">
-        <number>24</number>
+        <number>100</number>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
@@ -476,7 +563,15 @@ QProgressBar::chunk {
           <enum>QFrame::Sunken</enum>
          </property>
          <property name="text">
-          <string>능력치 Button은 한번 클릭 할 때 마다   </string>
+          <string>게임 설명:
+이 게임은 용사 김큐티의 모험을 함께하는 게임입니다. 
+
+마왕과 그의 수하들은 어휘에 약합니다. 
+그들이 예상하지 못하는 당신의 '끝내주는 어휘력'으로 그들을 제압하세요!! 
+
+오른쪽의 카드들은 당신을 강하게 만들고 그들에게 피해를 줄 도구들입니다! 잘 활용하세요!! 
+
+마왕&quot;최빵빵&quot;과 그의 수하들을 무찌르고 세상을 구하십시오!! </string>
          </property>
          <property name="alignment">
           <set>Qt::AlignJustify|Qt::AlignTop</set>
@@ -602,8 +697,7 @@ QPushButton:pressed {
 </string>
          </property>
          <property name="text">
-          <string>AP증가
-공격력 100 상승</string>
+          <string>AP증가</string>
          </property>
          <property name="autoDefault">
           <bool>false</bool>
@@ -618,7 +712,7 @@ QPushButton:pressed {
  </widget>
  <resources>
   <include location="../Resource.qrc"/>
-  <include location="Resource.qrc"/>
+  <include location="../Resource.qrc"/>
  </resources>
  <connections/>
 </ui>

@@ -47,7 +47,7 @@ class Ui_MainWindow(object):
         self.HeroPicture.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignVCenter)
         self.HeroPicture.setObjectName("HeroPicture")
         self.verticalLayoutWidget = QtWidgets.QWidget(self.centralwidget)
-        self.verticalLayoutWidget.setGeometry(QtCore.QRect(240, 40, 381, 251))
+        self.verticalLayoutWidget.setGeometry(QtCore.QRect(240, 40, 388, 255))
         self.verticalLayoutWidget.setObjectName("verticalLayoutWidget")
         self.StatusLabels = QtWidgets.QVBoxLayout(self.verticalLayoutWidget)
         self.StatusLabels.setContentsMargins(0, 0, 0, 0)
@@ -59,7 +59,6 @@ class Ui_MainWindow(object):
         sizePolicy.setHeightForWidth(self.attackSummary.sizePolicy().hasHeightForWidth())
         self.attackSummary.setSizePolicy(sizePolicy)
         self.attackSummary.setFrameShape(QtWidgets.QFrame.Box)
-        self.attackSummary.setText("")
         self.attackSummary.setObjectName("attackSummary")
         self.StatusLabels.addWidget(self.attackSummary)
         self.APLayout = QtWidgets.QHBoxLayout()
@@ -149,6 +148,49 @@ class Ui_MainWindow(object):
         self.CC_villain.setObjectName("CC_villain")
         self.CCLayout.addWidget(self.CC_villain)
         self.StatusLabels.addLayout(self.CCLayout)
+        self.horizontalLayout = QtWidgets.QHBoxLayout()
+        self.horizontalLayout.setContentsMargins(-1, 0, -1, -1)
+        self.horizontalLayout.setObjectName("horizontalLayout")
+        self.AA_Hero = QtWidgets.QProgressBar(self.verticalLayoutWidget)
+        self.AA_Hero.setStyleSheet("QProgressBar{ \n"
+"    border: 2px solid grey;\n"
+"}\n"
+" QProgressBar::chunk {\n"
+"background-color: #f4ffc2;\n"
+"}")
+        self.AA_Hero.setProperty("value", 0)
+        self.AA_Hero.setAlignment(QtCore.Qt.AlignCenter)
+        self.AA_Hero.setObjectName("AA_Hero")
+        self.horizontalLayout.addWidget(self.AA_Hero)
+        self.CriticalChance_2 = QtWidgets.QLabel(self.verticalLayoutWidget)
+        sizePolicy = QtWidgets.QSizePolicy(QtWidgets.QSizePolicy.Fixed, QtWidgets.QSizePolicy.Preferred)
+        sizePolicy.setHorizontalStretch(0)
+        sizePolicy.setVerticalStretch(0)
+        sizePolicy.setHeightForWidth(self.CriticalChance_2.sizePolicy().hasHeightForWidth())
+        self.CriticalChance_2.setSizePolicy(sizePolicy)
+        font = QtGui.QFont()
+        font.setFamily("휴먼아미체")
+        font.setPointSize(18)
+        self.CriticalChance_2.setFont(font)
+        self.CriticalChance_2.setFrameShape(QtWidgets.QFrame.NoFrame)
+        self.CriticalChance_2.setTextFormat(QtCore.Qt.PlainText)
+        self.CriticalChance_2.setScaledContents(False)
+        self.CriticalChance_2.setAlignment(QtCore.Qt.AlignCenter)
+        self.CriticalChance_2.setWordWrap(False)
+        self.CriticalChance_2.setObjectName("CriticalChance_2")
+        self.horizontalLayout.addWidget(self.CriticalChance_2)
+        self.AA_villain = QtWidgets.QProgressBar(self.verticalLayoutWidget)
+        self.AA_villain.setStyleSheet("QProgressBar{ \n"
+"    border: 2px solid grey;\n"
+"}\n"
+" QProgressBar::chunk {\n"
+"background-color: #f4ffc2;\n"
+"}")
+        self.AA_villain.setProperty("value", 0)
+        self.AA_villain.setAlignment(QtCore.Qt.AlignCenter)
+        self.AA_villain.setObjectName("AA_villain")
+        self.horizontalLayout.addWidget(self.AA_villain)
+        self.StatusLabels.addLayout(self.horizontalLayout)
         self.horizontalLayoutWidget_4 = QtWidgets.QWidget(self.centralwidget)
         self.horizontalLayoutWidget_4.setGeometry(QtCore.QRect(20, 10, 821, 29))
         self.horizontalLayoutWidget_4.setObjectName("horizontalLayoutWidget_4")
@@ -167,7 +209,7 @@ class Ui_MainWindow(object):
 "    width: 10px; \n"
 "    margin: 1px; \n"
 "} ")
-        self.HeroHPBar.setProperty("value", 24)
+        self.HeroHPBar.setProperty("value", 100)
         self.HeroHPBar.setAlignment(QtCore.Qt.AlignCenter)
         self.HeroHPBar.setInvertedAppearance(True)
         self.HeroHPBar.setObjectName("HeroHPBar")
@@ -196,7 +238,7 @@ class Ui_MainWindow(object):
 "    width: 10px; \n"
 "    margin: 1px; \n"
 "} ")
-        self.villainHPBar.setProperty("value", 24)
+        self.villainHPBar.setProperty("value", 100)
         self.villainHPBar.setAlignment(QtCore.Qt.AlignCenter)
         self.villainHPBar.setInvertedAppearance(False)
         self.villainHPBar.setObjectName("villainHPBar")
@@ -318,6 +360,11 @@ class Ui_MainWindow(object):
     def retranslateUi(self, MainWindow):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "QT Worrier"))
+        self.attackSummary.setText(_translate("MainWindow", "능력치 설명:\n"
+" AP: 공격력 \n"
+" AC: 회피율 33%, 66%, 99% 데미지 감소\n"
+" CC: 치명타확률 발동시 2배데미지\n"
+" AUTO ATTACK: 자동공격 delay"))
         self.AP_Hero.setText(_translate("MainWindow", "TextLabel"))
         self.AttackPoint.setText(_translate("MainWindow", " AP "))
         self.AP_villain.setText(_translate("MainWindow", "TextLabel"))
@@ -327,18 +374,28 @@ class Ui_MainWindow(object):
         self.CC_Hero.setText(_translate("MainWindow", "TextLabel"))
         self.CriticalChance.setText(_translate("MainWindow", " CC "))
         self.CC_villain.setText(_translate("MainWindow", "TextLabel"))
+        self.AA_Hero.setFormat(_translate("MainWindow", "%p/%m"))
+        self.CriticalChance_2.setText(_translate("MainWindow", "AUTO ATTACK"))
+        self.AA_villain.setFormat(_translate("MainWindow", "%p/%m"))
         self.HeroHPBar.setFormat(_translate("MainWindow", "%p/%m"))
         self.HP1.setText(_translate("MainWindow", "HP"))
         self.summaryTitle.setText(_translate("MainWindow", "                       전투 결과 요약                       "))
         self.HP2.setText(_translate("MainWindow", "HP"))
         self.villainHPBar.setFormat(_translate("MainWindow", "%p/%m"))
         self.check.setText(_translate("MainWindow", "입력"))
-        self.wordInformation.setText(_translate("MainWindow", "능력치 Button은 한번 클릭 할 때 마다   "))
+        self.wordInformation.setText(_translate("MainWindow", "게임 설명:\n"
+"이 게임은 용사 김큐티의 모험을 함께하는 게임입니다. \n"
+"\n"
+"마왕과 그의 수하들은 어휘에 약합니다. \n"
+"그들이 예상하지 못하는 당신의 \'끝내주는 어휘력\'으로 그들을 제압하세요!! \n"
+"\n"
+"오른쪽의 카드들은 당신을 강하게 만들고 그들에게 피해를 줄 도구들입니다! 잘 활용하세요!! \n"
+"\n"
+"마왕\"최빵빵\"과 그의 수하들을 무찌르고 세상을 구하십시오!! "))
         self.UpgradeButton4.setText(_translate("MainWindow", "CC증가"))
         self.UpgradeButton3.setText(_translate("MainWindow", "AC증가"))
         self.UpgradeButton2.setText(_translate("MainWindow", "HP증가"))
-        self.UpgradeButton1.setText(_translate("MainWindow", "AP증가\n"
-"공격력 100 상승"))
+        self.UpgradeButton1.setText(_translate("MainWindow", "AP증가"))
 
 import Data.Resource_rc
 
