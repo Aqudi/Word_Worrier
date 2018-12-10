@@ -41,7 +41,7 @@ class Character:
         information = [("name", self.name), ("HP", self.hp), ("AP", self.ap), ("AC", self.ac), ("CC", self.cc)]
         for tag, value in information:
             print(tag, ": ", value)
-        print()
+        return information
 
     def jackpot(self, point):
         point = int(point * 10)  # 99.9%의 경우에는 99.9로 저장되므로 *10을 해서 정수로 바꿔준다.

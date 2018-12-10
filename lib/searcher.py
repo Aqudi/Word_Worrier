@@ -1,7 +1,7 @@
 from bs4 import BeautifulSoup
 import requests
 import configparser
-from word import Word
+from lib.word import Word
 
 
 class Searcher:

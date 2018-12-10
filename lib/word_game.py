@@ -1,5 +1,5 @@
-from word import Word
-from searcher import Searcher
+from lib.word import Word
+from lib.searcher import Searcher
 
 
 class WordGame:
@@ -13,7 +13,7 @@ class WordGame:
         # 제대로된 검색결과를 받을 때까지 반복
         while self.correct_answer == "error" or self.correct_answer == "" or self.definition == "":
             # 받아오는 데이터 형식 ---> 단어: 단어의 뜻
-            information = self.searcher.getWordInformation(self.word.getRandomWord(length))
+            information = self.searcher.get_word_information(self.word.get_random_word(length))
             information = information.split(": ")
 
             # 한글이 아닌 내용이 있을 시 제거 (예시) 맏-손자 -> 맏손자
