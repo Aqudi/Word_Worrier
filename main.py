@@ -140,14 +140,14 @@ class MainWindow(QMainWindow, Main_Window):
 
     def create_villain(self):
         # 캐릭터 info 인자 name, hp, ap, ac, cc, image, aa
-        names = ["최빵빵부하1", "최빵빵부하2", "최빵빵"]
+        names = ["최빵빵부하1", "최빵빵부하2", "최빵빵부하3", "최빵빵부하4", "최빵빵"]
         images = Villain.get_images_resource()
         stage_info = {1: dict(name=names[0], health_point=5000, attack_point=250, avoid_chance=5, critical_chance=5,
                               image=images[self.stage-1], auto_attack=10),
                       2: dict(name=names[1], health_point=10000, attack_point=400, avoid_chance=15, critical_chance=15,
-                              image=images[self.stage-1], auto_attack=50),
+                              image=images[self.stage-1], auto_attack=100),
                       3: dict(name=names[2], health_point=15000, attack_point=600, avoid_chance=30, critical_chance=10,
-                              image=images[self.stage-1], auto_attack=10),
+                              image=images[self.stage-1], auto_attack=40),
                       4: dict(name=names[1], health_point=25000, attack_point=600, avoid_chance=40, critical_chance=15,
                               image=images[self.stage - 1], auto_attack=10),
                     5: dict(name=names[2], health_point=25000, attack_point=1000, avoid_chance= 50, critical_chance=10,
