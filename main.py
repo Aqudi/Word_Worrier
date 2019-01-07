@@ -174,6 +174,13 @@ class MainWindow(QMainWindow, Main_Window):
 
     def game_init(self):
         # 게임 시작
+        # 히어로 사망 후 새로운 시작일 시 체력바 초기화
+        if self.hero.check_alive():
+            self.Hero.modify_hp(self.Hero.get_max_hp())
+
+        # 히어로, 빌런의 자동공격 타이머 초기화
+        self.timer.set_count(0)
+
         # 입력버튼, 입력창 초기화
         self.check.setText("입력")
         self.wordInput.setReadOnly(False)

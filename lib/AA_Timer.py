@@ -22,6 +22,9 @@ class AAThread(QThread):
     def set_multi(self, multi):
         self.multi = multi
 
+    def set_count(self, value):
+        self.count = value
+
     def __del__(self):
         self.wait()
 
