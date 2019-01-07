@@ -22,7 +22,7 @@ class Character:
     def modify_max_hp(self, point):
         amount = int(self.max_hp * (1+point/100))
         self.max_hp = amount
-        self.modify_hp(amount)
+        self.modify_hp(self.max_hp * point/100)
         print("hp ", self.hp, "max_hp ", self.max_hp)
 
     def modify_ap(self, point):

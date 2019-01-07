@@ -100,7 +100,7 @@ class MainWindow(QMainWindow, Main_Window):
             modify_stat[card.get_name()](card.get_value())
 
         elif card.get_type() is "HEAL":
-            self.hero.modify_hp(card.get_value())
+            self.hero.modify_hp(self.hero.max_hp * card.get_value()/100)
 
         # 바뀐 게임 정보 갱신
         self.cards[idx].set_random_pool_value()
